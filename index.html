@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!--encoding muestra acentos, ñ-->
+
+    <!--El valor viewport únicamente será leído por móviles, tablets y dispositivos conectados a internet en general, en los que el tamaño de su navegador esté supeditado al tamaño de la pantalla del dispositivo (osea todos).
+
+    En este ejemplo (que está ampliado en el tema: Responsive design) se indica que el ancho del contenido se adaptará al ancho de la pantalla del dispositivo y que el zoom (tamaño) inicial del contenido será del 100% 
+    (para que el contenido no tenga que ampliarse por el usuario nada más acceder a la web y sea legible sin esfuerzo).-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--informacion para el navegador-->
+
+    <!--
+    <meta name="description" content="Descripción de la página">
+    
+    Dentro del atributo content=" " escribiremos el texto que queremos que aparezca como descripcion de nuestra página cuando ésta aparezca dentro de los resultados de búsqueda de los buscadores. No influye en el posicionamiento, pero si puede condicionar a que los usuarios hagan clic y accedan en un mayor número a nuestra página.
+    La longitud idónea no debe ser superior a 156 carácteres, para que el buscador no lo corte por donde más le convenga.
+    -->
+
+
+    <title>Desarrollador freeLance</title> <!--Se muestra en la pestaña del navegador.
+    Además ser el que se muestre en las búsquedas de los diferentes buscadores y es un elemento importante
+     (a nivel de SEO) para el posicionamiento de la página.-->
+
+    <!-- el css se puede añadir aqui pero no es recomendacle. Mejor archivo aparte
+     Son hojas en cascada eso quiere decir que el último estilo anula los anteriores
+     a no ser que os anteriores sean mas ESPECIFICOS( el naegador siempre seleccionara
+     el selector que mas especifique el elemento. Ver diapositiva)
+     Se puede escribir selector, propiedad y valor en MAYUSCULAS pero no es recomendable
+     
+     Si usamos !important será el selector que se aplique
+        span{
+            color:green !important;
+        }
+
+
+     -->
+
+
+    <!--
+   <style>
+        h1 {
+            color: red;
+            text-align: center;
+        }
+
+        h2 {
+            color: blanchedalmond
+        }
+
+        H2 {
+            color: blue
+        }
+    </style>
+    -->
+
+
+    <!-- añado NORMALIZE.CSS para normalizar código en distintos navegadores-->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- añado familia de google fonts KRUB. Lo mejor es descargar solo la variante que necesitaremos y no toda la FAMILIA al completo porque se hara mas pesada nuestra web-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- si queremos que nuestra web sea más rápida usamos PRELOAD-->
+    <link rel="preload" href="css/styles.css" as="style">
+    <!--enlazamos archivo css externo, la relacion con el documento actual es hoja de estilo y el tipo de la hoja todo esto no es necasario. 
+    A veces el type da error type="txt/css"-->
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- 1.lo primero que definimos es el texto de cada apartado, p, h1, h2 etc
+     
+    2. agrupamos medinate etiquetas html header, footer,nav,main ( para el contenido principal),section,article para entrada de blog o noticia, aside
+    para barra lateral y div cuando no se usa ninguno de los anteriores-->
+
+    <!--menu navegacion-->
+
+    <!--regla es que solo puede haber un h1 por archivo html, 
+    el navegador no nos va a dar error pero debemos hacer buenas prácticas-->
+
+    <!-- todos los heading como h1,h2 etc l ser contenido importante deben tener un header y los demas section. Header solo puedde haber uno-->
+
+    <!--no se recomienda usar todo con mayusculas eso se modificará con css -->
+
+    <header>
+        <h1 class="titulo">Jesús Bernabé Imedio Perea <span>Freelancer</span></h1>
+    </header>
+
+    <!-- MENÚ DE NAVEGACIÓN con clase nav background-->
+    <div class="nav-bg">
+        <!--barra de navegación, como el menu es de un solo nivel no se usa ul, ol etc..directamente creamos los enlaces-->
+        <nav class="navegacion-principal contenedor">
+            <!-- si hay muchos enlaces se usa nav para agruparlos-->
+            <!-- el enlace tiene como atributo href y la imagen src
+         
+        si aun no tenemos la pagina del enlace pondremos el #-->
+            <a href="#">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="#">Clientes</a>
+            <a href="#">Contactos</a>
+
+        </nav>
+    </div> <!-- .nav-bg -->
+
+
+
+    <!-- A VECES NOS PUEDEN PEDIR EN NUESTRO TRABAJO ELIMINAR UNA PARTE Y CONVIENE ANULARLA CON COMENTARIOS POR SI LUEGO NOS PIDEN QUE
+     LA VOLVAMOS A METER por ejemplo el menú de navegación anterior-->
+
+
+
+    <!-- si puede haber varios h2,h3, etc-->
+    <!--APARTADO VIDEO 37-->
+    <section class="hero"> <!--definimos clase HERO en section para poder trbajar con CSS-->
+        <!-- incorporamos imagen.Recomendado que este en carpeta image, img etc.. a través de css con clase hero-->
+
+        <!--creo un DIV con clase para trabajar con todo el contenido de section-->
+        <div class="contenido-hero">
+
+            <!-- CSS A LOS HEADINGS 
+             eliminamos esta clase para el posicionamiento tanto vretical como horizontal Video 40
+            <h2 class="titulo">Diseño y Desarrollo Web <span>Freelancer</span></h2>
+            -->
+
+            <h2 class="titulo">Diseño y Desarrollo Web <span>Freelancer</span></h2>
+
+            <div class="ubicacion">
+                <!-- tabler icons o heroicons son repositorio con svg(scalable vector graphic) Se puede hacer muy grande sin distorsionar
+            y los navegadores lo soportan bastante bien. También existe fontawesome
+     
+            Vamos a la web y seleccionamos lo cual nos copia el icono. hora desde aqui copiamos-->
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="88"
+                    height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffC107" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                </svg>
+                <p>Ciudad Real, España</p>
+
+            </div>
+            <a class="boton" href="#"> Contactar</a>
+        </div> <!-- .contenido-hero -->
+
+    </section>
+
+    <!--MAIN hace referencia a la sección principal de nuestra página la cúal tendrá 3 secciones bien definidas
+     reutilizaremos nuestra clase .contenedor-->
+    <main class="contenedor sombra">
+        <!-- si ponemos solo la p y damos a tabulador nos mostrara las etiquetas tanto de apaertura como de cierre-->
+        <h2>Mis Servicios</h2>
+
+        <!--a veces el cliente o nos ha pasado aun el texto que debe tener la página
+    pero nosoros queremos saber como quedaria para ello usamos lorem Ipsum visitandoo su pagina https://lipsum.com/
+    para ver como quedaria la pagina con varios parrafos.
+    
+    Si ponemos lorem y damos al tabulador mostrara texto-->
+
+
+
+        <!-- Creo un div que englobe los 3 section para aplicarles GRID(video 45)-->
+        <div class="servicios">
+
+            <section class="servicio">
+                <h3>Diseño Web</h3>
+
+                <!-- Creo div para agrupar iconos porque uno de los section tiene 2 iconos-->
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-palette" width="44"
+                        height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" />
+                        <path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                    </svg>
+                </div>
+                <!--icon-->
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, libero temporibus error assumenda hic
+                    vero
+                    pariatur
+                    quas accusantium optio. Illum architecto perspiciatis sint corrupti ea adipisci impedit labore
+                    facere
+                    deleniti?</p>
+            </section>
+
+            <section class="servicio">
+                <h3>Aplicaciones Móviles</h3>
+
+                <div class="iconos">
+                    <!--icon android-->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-android"
+                        width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 10l0 6" />
+                        <path d="M20 10l0 6" />
+                        <path d="M7 9h10v8a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-8a5 5 0 0 1 10 0" />
+                        <path d="M8 3l1 2" />
+                        <path d="M16 3l-1 2" />
+                        <path d="M9 18l0 3" />
+                        <path d="M15 18l0 3" />
+                    </svg>
+                    <!--icon apple-->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-apple" width="44"
+                        height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M8.286 7.008c-3.216 0 -4.286 3.23 -4.286 5.92c0 3.229 2.143 8.072 4.286 8.072c1.165 -.05 1.799 -.538 3.214 -.538c1.406 0 1.607 .538 3.214 .538s4.286 -3.229 4.286 -5.381c-.03 -.011 -2.649 -.434 -2.679 -3.23c-.02 -2.335 2.589 -3.179 2.679 -3.228c-1.096 -1.606 -3.162 -2.113 -3.75 -2.153c-1.535 -.12 -3.032 1.077 -3.75 1.077c-.729 0 -2.036 -1.077 -3.214 -1.077z" />
+                        <path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2" />
+                    </svg>
+                </div>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam modi rerum officiis dolor nostrum
+                    fugiat
+                    aperiam fuga veniam nobis nam. Dolore dolor dolorum veniam porro officiis nulla sint vel laboriosam?
+                </p>
+            </section>
+
+            <section class="servicio">
+                <h3>E-Commence</h3>
+
+                <div class="iconos">
+                    <!--icon-->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card" width="44"
+                        height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
+                        <path d="M3 10l18 0" />
+                        <path d="M7 15l.01 0" />
+                        <path d="M11 15l2 0" />
+                    </svg>
+
+                </div>
+
+
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus repellendus, dolorem voluptatem
+                    consequatur rerum molestias, eligendi ipsam maiores sit impedit soluta praesentium minus deleniti a
+                    odit
+                    laborum officia
+                    expedita alias.</p>
+            </section>
+
+        </div> <!-- .servicios-->
+
+    </main>
+
+    <!-- sección corresppondiente al formulario de contacto, que se enviara par registrar en el servidor PHP-->
+    <section>
+        <h2>Contacto</h2>
+        <form class="formulario" action="enviar.php" method="POST">
+            <!--action es la ruta del archivo que procesara el formulario, method es el metodo de envio de datos-->
+            <fieldset> <!--recuadro que engloba todo el formulario-->
+                <legend> Contactame rellenado todos los campos</legend>
+
+
+                <div class="contenedor-campos"> <!-- para luego applicar CSS agruparemos cada campo mediante un DIV-->
+
+                    <!-- para luego applicar CSS agruparemos cada campo mediante un DIV-->
+
+                    <!-- campo NOMBRE-->
+                    <div class="campo">
+                        <label>Nombre</label>
+                        <input class="input-text" type="text" placeholder="introduzca su Nombre"></input> <!--type text es por defecto-->
+                        <!-- de tipo text aparecieron otros para por ejemplo dispositivo movil ej tel. Que al seleccionar nos abre el telefono, text nos abrira el teclado, email para
+                 que aparezca @, number etc.. ESTA FORMA TAMBIEN VALIDA ACEPTANDO SOLO LOS DATOS VÁLIDOS-->
+                    </div>
+
+
+                    <!-- campo TELEFONO-->
+                    <div class="campo">
+                        <label>Teléfono</label>
+                        <input class="input-text" type="tel" placeholder="Marque su teléfono">
+                    </div>
+
+                    <!-- campo CORREO-->
+                    <div class="campo">
+                        <label>Correo</label>
+                        <input class="input-text" type="email" placeholder="Su email por favor" />
+                    </div>
+
+                    <!-- campo MENSAJE-->
+                    <div class="campo">
+                        <label>Mensaje:</label>
+                        <textarea class="input-text"></textarea>
+                    </div>
+
+
+                </div> <!-- .contenedor-campos -->
+                <!-- boton enviar se puede hacer de estaas dos formas -->
+                <div class="alinear-derecha flex">
+                    <input class="boton w-sm-100" type="submit" value="Enviar">
+                    <!-- o bien de esta forma pero no es recomendable porque no es semántico y no es accesible para personas con discapacidad visual que usan lectores de pantalla
+                    <button type="submit">Enviar</button>
+                -->
+                </div>
+
+
+
+            </fieldset>
+
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>Todos los derechos reservados. Jesús Bernabé Imedio Perea</p>
+    </footer>
+
+</body>
+
+</html>
